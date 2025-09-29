@@ -23,6 +23,9 @@ let totalSpent = 0;
 // A function that adds an item price (with tax) to our total amount spent
 const buyItem = (price) => {
 	//You should use the addTax function and totalSpent variable here
+  totalSpent += addTax(price);
+  const message = console.log(`You bought an item for ${addTax(price)}. Total so far: ${Math.round(totalSpent*100)/100}`);
+  return message;
 };
 
 // 🧪 Test your function below with the following inputs 
